@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 
 import ReactDOM from "react-dom"
-import { library } from "@fortawesome/fontawesome-svg-core"
+
 import GlobalProvider from "./context/MainContext"
 import Main from "./components/Main"
 import MainSermons from "./components/sermons/mainSermons"
@@ -13,7 +13,7 @@ import Services from "./components/sermons/OnlineServices"
 import Fellowship from "./components/fellowship/Fellowship"
 import NotFound from "./components/ui/NotFound/NotFound"
 
-import { icons } from "./HOC/icons"
+
 import recordMetrics from "./components/metrics/metrics"
 import "bootstrap"
 
@@ -29,9 +29,7 @@ if (module.hot) {
 
 window.React = React
 class App extends Component {
-  componentDidMount() {
-    library.add(...icons)
-  }
+  
   render() {
     return (
       <GlobalProvider>

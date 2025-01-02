@@ -9,8 +9,8 @@ import {
   CardMedia,
   Avatar,
   Paper,
-} from "@material-ui/core"
-import { makeStyles } from "@material-ui/core"
+} from   "@mui/material"
+import {makeStyles}from "@mui/styles"
 
 import delo from "../../images/assets/img/pstdelton.jpg"
 import jp from "../../images/assets/img/newlcc/jp_psd.jpg"
@@ -20,14 +20,14 @@ import sam from "../../images/assets/img/newlcc/sam.jpg"
 import logoG from "../../images/assets/img/logoG.jpg"
 import rickyG from "../../images/assets/img/2022/IMG-20221102-WA0004.jpg"
 
-const useStyles = () =>
+const createStyles = () =>
   makeStyles({
     avatarSize: {
       height: 200,
       width: 200,
     },
   })
-const classes = useStyles()
+const classes = createStyles()
 const PStaff = () => {
   return (
     <Container

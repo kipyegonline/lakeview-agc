@@ -1,6 +1,6 @@
 import React from "react"
 import $ from "jquery"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 import {
   Avatar,
   Card,
@@ -11,7 +11,7 @@ import {
   Typography,
   Divider,
   CardMedia,
-} from "@material-ui/core"
+} from   "@mui/material"
 
 import Form from "./form/Form"
 import jp from "../../images/assets/img/newlcc/jp_psd.jpg"
@@ -21,6 +21,7 @@ import delton from "../../images/assets/img/pstdelton.jpg"
 import eric from "../../images/assets/img/2019/eric_ochieng.jpg"
 import harry from "../../images/assets/img/2019/harry.jpg"
 import harry2 from "../../images/assets/img/newlcc/IMG-20200813-WA0002.jpg"
+import { Facebook, Mail, MapPin, Smartphone } from "lucide-react"
 
 class Contacts extends React.Component {
   constructor(props) {
@@ -166,15 +167,16 @@ const GeneralInfo = () => (
     <h5 className="pb text-uppercase text-center ">Connect with us </h5>
 
     <h4 className="mb-0 purple-border">
-      <FontAwesomeIcon className="mr-2" icon="mobile" color="brown" size="sm" />
+      <Smartphone className="mr-2"  color="brown"/>
+     
       Phone:
     </h4>
     <div className="my-2">0797438190</div>
     <h4 className="mb-0 text-lg purple-border">
-      <FontAwesomeIcon
+      <Mail
         className="mr-2"
         color="brown"
-        icon="envelope"
+      
         size="sm"
       />
       Email:
@@ -185,18 +187,18 @@ const GeneralInfo = () => (
     <h4 className="mb-0 text-lg purple-border">
       Facebook:{" "}
       <a href="https://www.facebook.com/Lakeview-AGC-Nakuru-355976284540480">
-        <FontAwesomeIcon
+        <Facebook
           className="mr-2"
-          icon={["fab", "facebook"]}
+         
           size="sm"
         />
       </a>
     </h4>
 
     <h4 className="my-2 purple-border">
-      <FontAwesomeIcon
+      <MapPin
         className="mr-2"
-        icon="map-marker-alt"
+        
         color="brown"
         size="sm"
       />

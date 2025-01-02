@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import headerlg from "../images/assets/img/2020/lakeview_lg.jpg.png"
 import headermd from "../images/assets/img/2020/march_header.png"
 import headersm from "../images/assets/img/2020/LAKEVIEW_SM.jpg.png"
-import { makeStyles } from "@material-ui/styles"
+import {makeStyles}from "@mui/styles"
 
 const headerDims = () => {
   let w

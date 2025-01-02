@@ -1,12 +1,13 @@
 import React, { useState } from "react"
-import { Typography, IconButton, AppBar } from "@material-ui/core"
+import { Typography, IconButton, AppBar } from   "@mui/material"
 import { Link as NavLink } from "gatsby"
 import $ from "jquery"
-import HomeIcon from "@material-ui/icons/Home"
-import SchoolIcon from "@material-ui/icons/School"
-import Close from "@material-ui/icons/Close"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { SpeakerNotes } from "@material-ui/icons"
+import HomeIcon from "@mui/icons-material/Home"
+import SchoolIcon from "@mui/icons-material/School"
+import Close from "@mui/icons-material/Close"
+
+import { SpeakerNotes } from "@mui/icons-material"
+import { BookOpenText, Handshake, MailCheck } from "lucide-react"
 
 const style = {
   color: "red",
@@ -75,11 +76,8 @@ const Nav = ({ match }) => {
                 className="nav-link text-uppercase text-expanded "
                 to={"/about-lakeview-agc"}
               >
-                <FontAwesomeIcon
-                  size="lg"
-                  className="mr-2"
-                  icon="praying-hands"
-                />{" "}
+               
+                <Handshake/>
                 About Us{" "}
               </NavLink>
             </li>
@@ -110,7 +108,8 @@ const Nav = ({ match }) => {
                 className="nav-link text-uppercase text-expanded "
                 to={"/home-fellowship-and-bible-study"}
               >
-                <FontAwesomeIcon size="lg" className="mr-2" icon="bible" />
+                <BookOpenText/>
+               
                 Disclipleship
               </NavLink>
             </li>
@@ -121,11 +120,8 @@ const Nav = ({ match }) => {
                 className="nav-link text-uppercase text-expanded "
                 to={"/get-in-touch"}
               >
-                <FontAwesomeIcon
-                  size="lg"
-                  className="mr-2"
-                  icon="address-book"
-                />
+              
+                <MailCheck/>
                 Contact Us
               </NavLink>
             </li>

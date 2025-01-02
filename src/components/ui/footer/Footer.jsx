@@ -6,7 +6,7 @@ import {
   WeeklyEvents,
   Give,
 } from "../../Home/events/Events"
-import { Typography, Box, Grid } from "@material-ui/core"
+import { Typography, Box, Grid } from   "@mui/material"
 const Footer = () => (
   <Box style={footer} className="footer py-2 container">
     <Grid container justify="space-evenly" alignItems="flex-start">

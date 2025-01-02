@@ -1,23 +1,25 @@
 import React from "react"
 
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { ListItemIcon, List, ListItem, IconButton } from "@material-ui/core"
-import { makeStyles } from "@material-ui/styles"
-import Facebook from "@material-ui/icons/Facebook"
+
+
+import { ListItemIcon, List, ListItem, IconButton } from   "@mui/material"
+import {  ThemeProvider,createTheme } from "@mui/material/styles"
+import {makeStyles}from "@mui/styles"
+import Facebook from "@mui/icons-material/Facebook"
 import PropTypes from "prop-types"
-import YouTube from "@material-ui/icons/YouTube"
-import IG from "@material-ui/icons/Instagram"
-import Twitter from "@material-ui/icons/Twitter"
+import YouTube from "@mui/icons-material/YouTube"
+import IG from "@mui/icons-material/Instagram"
+import Twitter from "@mui/icons-material/Twitter"
 
 import Header from "./header"
 import Footer from "./ui/footer/Footer"
 import Nav from "./ui/Nav/Nav"
-import { icons } from "./icons"
-import Give from "./give/Give"
-import { ArrowUpwardRounded } from "@material-ui/icons"
-///import "./layout.css"
 
+import Give from "./give/Give"
+import { ArrowUpwardRounded } from "@mui/icons-material"
+import { CircleArrowUpIcon } from "lucide-react"
+///import "./layout.css"
+const theme = createTheme();
 const Layout = ({ children }) => {
   const [socials, showSocials] = React.useState(false)
   const handleNavigation = () => window.scrollTo({ behavior: "smooth", top: 0 })
@@ -48,7 +50,7 @@ const Layout = ({ children }) => {
 
   React.useEffect(() => {
     let timer = setTimeout(() => showSocials(true), 5000)
-    library.add(...icons)
+    
 
     return () => clearTimeout(timer)
   }, [])
@@ -58,16 +60,16 @@ const Layout = ({ children }) => {
       <Header Socials={Socials} />
       <Nav />
       <Give />
-      {children}
+      <ThemeProvider theme={theme}>  {children}</ThemeProvider>
+    
       <Footer />
-
-      <FontAwesomeIcon
-        className="navigation-arrow"
+      <CircleArrowUpIcon   className="navigation-arrow"
         icon="arrow-alt-circle-up"
         size={arrowSize}
         color="purple"
-        onClick={handleNavigation}
-      />
+        onClick={handleNavigation}/>
+
+     
       {socials ? <Socials useStyles={useStyles} /> : null}
     </div>
   )

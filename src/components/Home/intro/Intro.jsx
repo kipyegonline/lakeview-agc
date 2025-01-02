@@ -13,16 +13,17 @@ import {
   Avatar,
   CircularProgress,
   TextField,
-} from "@material-ui/core"
+} from   "@mui/material"
 import DatePicker from "react-datepicker"
-import ArrowIcon from "@material-ui/icons/Link"
-import ErrorIcon from "@material-ui/icons/Error"
+import ArrowIcon from "@mui/icons-material/Link"
+import ErrorIcon from "@mui/icons-material/Error"
 import fasting from "../../../images/assets/img/2021/fastingwide.png"
 
 import theme from "../../../images/assets/img/2022/theme_of_the_year.jpg"
 import theme2024 from "../../../images/assets/img/2024/IMG-20231230-WA0008.jpg"
-import { makeStyles, StylesContext } from "@material-ui/styles"
-import { Pagination } from "@material-ui/lab"
+import {  StylesContext } from "@mui/material/styles"
+import {makeStyles}from "@mui/styles"
+import { Pagination } from "@mui/material"
 const Intro = ({ churcharea = [], fast = {}, getDate, selected }) => {
   const PrayerFasting = (
     <Box>
