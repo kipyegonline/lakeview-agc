@@ -20,7 +20,7 @@ import ErrorIcon from "@mui/icons-material/Error"
 import fasting from "../../../images/assets/img/2021/fastingwide.png"
 
 import theme from "../../../images/assets/img/2022/theme_of_the_year.jpg"
-import theme2024 from "../../../images/assets/img/2024/IMG-20231230-WA0008.jpg"
+import theme2025 from "../../../images/assets/img/2025/theme.jpg"
 import {  StylesContext } from "@mui/material/styles"
 import {makeStyles}from "@mui/styles"
 import { Pagination } from "@mui/material"
@@ -407,7 +407,7 @@ export const ThemeOfTheYear = () => {
       <h6 className="py-2">Happy new Year {year} from Lakeview AGC</h6>
       <img
         className={styles.img}
-        src={theme2024}
+        src={theme2025}
         alt={`Theme of the year ${year}`}
       />
     </div>
