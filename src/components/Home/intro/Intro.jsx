@@ -58,14 +58,14 @@ const Intro = ({ churcharea = [], fast = {}, getDate, selected }) => {
             }}
           >
             {" "}
-            <Typography className=" r " variant="body1">
+            <Typography className="  " variant="body1">
               {" "}
               <strong>
                 Theme of the Year - {new Date().getFullYear()}
               </strong>{" "}
             </Typography>
-            <Typography variant="body2" className="font-weight-bold mb-2">
-              <q> A Heart for the Harvest </q>
+            <Typography variant="body2" className="!font-semibold !text-2xl  text-uppercase !py-3 mb-2">
+             Gather Grow Transform
             </Typography>
           </Card>
         </Grid>
@@ -93,8 +93,8 @@ const Intro = ({ churcharea = [], fast = {}, getDate, selected }) => {
                 Scripture of the Year - {new Date().getFullYear()}
               </strong>
             </Typography>
-            <Typography className="font-semibold">
-              Mathew 9:35-Mathew 10:1
+            <Typography className="!text-3xl !font-medium">
+              Acts 2:42-47
             </Typography>
           </Card>
         </Grid>

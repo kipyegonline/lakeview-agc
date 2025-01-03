@@ -1,6 +1,6 @@
 import React from "react"
 import Slider from "react-slick"
-import { Typography } from   "@mui/material"
+import { Typography,Box } from   "@mui/material"
 
 export const ReactSlider = ({ carousels = [] }) => {
   const settings = {
@@ -21,7 +21,7 @@ export const ReactSlider = ({ carousels = [] }) => {
   return (
     <Slider {...settings}>
       {carousels.map((caro, index) => (
-        <div key={index} className="relative">
+        <Box key={index} className="relative">
           <img
             className="d-block img-fluid "
             src={caro.pic}
@@ -35,16 +35,16 @@ export const ReactSlider = ({ carousels = [] }) => {
             srcSet={`${caro.picSm} 300w,${caro.picMd} 600w,${caro.pic}  803w`}
             alt={caro.caption}
           />
-          <div className="carousel-caption d-none d-md-block">
+        {caro.caption.length>0  ?  <div className="carousel-caption d-none d-md-block">
             <Typography
-              style={{ color: "white", background: "purple", width: "100%" }}
-              className="text-shadow text-black "
+              style={{ color: "#fff", background: "purple", width: "100%" }}
+              className="text-white py-2 "
               variant="h6"
             >
               {caro.caption}{" "}
             </Typography>
-          </div>
-        </div>
+          </div> :null}
+        </Box>
       ))}
     </Slider>
   )

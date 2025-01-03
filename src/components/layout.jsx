@@ -57,10 +57,11 @@ const Layout = ({ children }) => {
 
   return (
     <div className="container ">
+       <ThemeProvider theme={theme}> 
       <Header Socials={Socials} />
       <Nav />
       <Give />
-      <ThemeProvider theme={theme}>  {children}</ThemeProvider>
+      {children}
     
       <Footer />
       <CircleArrowUpIcon   className="navigation-arrow"
@@ -71,6 +72,7 @@ const Layout = ({ children }) => {
 
      
       {socials ? <Socials useStyles={useStyles} /> : null}
+      </ThemeProvider>
     </div>
   )
 }

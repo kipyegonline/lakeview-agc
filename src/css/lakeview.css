@@ -80,6 +80,9 @@ h1 {
 .bg-faded {
   background-color: rgba(255, 255, 255, 0.9);
 }
+
+.border-red{border:1px solid red;}
+
 .bg-faded-nav {
   background-color: rgba(224, 36, 94, 0.9);
 } /* #007bfftwitter blue*/
@@ -149,12 +152,12 @@ hr.divider {
   text-align: center;
 }
 .navbar .navbar-toggler {
-  color: white;
+  /*color: white;*/
   font-weight: bold;
   border-color: white;
 }
 .navbar .navbar-toggler:hover {
-  color: #fff;
+  /*color: #fff;*/
 }
 .nav-link {
   padding: 0.5rem 0;
@@ -163,6 +166,9 @@ hr.divider {
 .nav-link:hover {
   border: 1px solid purple;
   border-radius: 16px;
+}
+.purple{
+  background:purple;
 }
 .purple-border {
   border-bottom: 1px purple solid;

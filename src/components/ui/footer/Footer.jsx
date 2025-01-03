@@ -8,7 +8,7 @@ import {
 } from "../../Home/events/Events"
 import { Typography, Box, Grid } from   "@mui/material"
 const Footer = () => (
-  <Box style={footer} className="footer py-2 container">
+  <Box style={footer} className="footer pt-6 md:pt-10 container ">
     <Grid container justify="space-evenly" alignItems="flex-start">
       <Grid item xs={12} md={3} lg={3}>
         {" "}

@@ -59,15 +59,15 @@ class Contacts extends React.Component {
     const { handleClick, handleMap, handleMapLeave } = this
     return (
       <div className="container">
-        <div className="row">
-          <div className="col-md-12">
+      
+          <div className="c">
             {" "}
             <GoogleMap
               handleMap={handleMap}
               handleMapLeave={handleMapLeave}
             />{" "}
           </div>
-        </div>
+       
         {/*row*/}
 
         <Divider />
@@ -142,7 +142,7 @@ const pastoralStaff = [
 ]
 
 const GoogleMap = ({ handleMap, handleMapLeave }) => (
-  <div className="col-md-12  mt-3">
+  <div className="  mt-3">
     <div
       onClick={() => handleMap()}
       onMouseLeave={() => handleMapLeave()}
@@ -151,8 +151,8 @@ const GoogleMap = ({ handleMap, handleMapLeave }) => (
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7979.5359027757895!2d36.09036012914633!3d-0.2879008840659985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18299274ae85cb9f%3A0x371b0a1059a0ea54!2sLakeview+Africa+Gospel+Church!5e0!3m2!1sen!2ske!4v1512806886474"
         style={{
-          width: resizeMap()[0],
-          height: resizeMap()[1],
+          width: "100%",
+          height: 480,
           frameBorder: 0,
           border: "5 gray solid",
           allowFullScreen: true,
@@ -167,17 +167,17 @@ const GeneralInfo = () => (
     <h5 className="pb text-uppercase text-center ">Connect with us </h5>
 
     <h4 className="mb-0 purple-border">
-      <Smartphone className="mr-2"  color="brown"/>
+      <Smartphone className="mr-2 inline"  color="brown"/>
      
       Phone:
     </h4>
     <div className="my-2">0797438190</div>
     <h4 className="mb-0 text-lg purple-border">
       <Mail
-        className="mr-2"
+        className="mr-2 inline"
         color="brown"
       
-        size="sm"
+       
       />
       Email:
     </h4>
@@ -188,19 +188,19 @@ const GeneralInfo = () => (
       Facebook:{" "}
       <a href="https://www.facebook.com/Lakeview-AGC-Nakuru-355976284540480">
         <Facebook
-          className="mr-2"
+          className="mr-2 inline "
          
-          size="sm"
+       
         />
       </a>
     </h4>
 
     <h4 className="my-2 purple-border">
       <MapPin
-        className="mr-2"
+        className="mr-2 inline"
         
         color="brown"
-        size="sm"
+       
       />
       Address:
     </h4>

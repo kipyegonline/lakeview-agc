@@ -22,10 +22,10 @@ import im5 from "../images/assets/img/2024/IMG-20231230-WA0006.jpg"
 import im6 from "../images/assets/img/2024/IMG-20231230-WA0013.jpg"
 import im7 from "../images/assets/img/2023/lakeviewsunday.jpg"
 import im8 from "../images/assets/img/2024/IMG-20231230-WA0003.jpg"
-import im9 from "../images/assets/img/2024/IMG-20231230-WA0007.jpg"
+
 import im10 from "../images/assets/img/2023/IMG-20230112-WA0002.jpg"
 
-import theme2024 from "../images/assets/img/2024/IMG-20231230-WA0008.jpg"
+import theme2025 from "../images/assets/img/2025/theme.jpg"
 import companionshipImg from "../images/assets/img/2024/IMG-20231230-WA0005.jpg"
 const day = new Date().getDay() % 2 === 0
 
@@ -33,9 +33,9 @@ export const smallSlides = [im8, im1, companionshipImg, im2]
 
 export const carosel = [
   {
-    pic: theme2024,
-    picMd: theme2024,
-    picSm: theme2024,
+    pic: theme2025,
+    picMd: theme2025,
+    picSm: theme2025,
     caption: "",
     active: true,
   },
@@ -84,20 +84,7 @@ export const carosel = [
     caption: "Saoshiro Christian Education centre",
     active: false,
   },
-  {
-    pic: im9,
-    picMd: im9,
-    picSm: im9,
-    caption: "",
-    active: false,
-  },
+ 
 
-  /*
-  {
-    pic: slide8lg,
-    picMd: slide8md,
-    picSm: slide8sm,
-    caption: "Family Fun day",
-    active: false,
-  },*/
+ 
 ]
