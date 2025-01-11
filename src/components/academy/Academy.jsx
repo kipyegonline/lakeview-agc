@@ -18,6 +18,7 @@ import {
   TableContainer,
   ButtonGroup,
   Button,
+  CircularProgress,
 } from   "@mui/material"
 import Mobile from "@mui/icons-material/PhoneAndroid"
 import Email from "@mui/icons-material/Email"
@@ -308,6 +309,14 @@ const academyShots = [
 
 const AcademyFee = () => {
   const [active, setActive] = React.useState("ECD")
+  const [spin, setSpin] = React.useState(false)
+  const handleToggle=(activity)=>{
+    setSpin(true);
+    setActive("")
+  setTimeout(()=>{
+    setActive(activity)
+    setSpin(false)},2000)
+  }
   return (
     <Card>
       <Typography variant="h6" className="text-center my-1 p-2">
@@ -320,19 +329,21 @@ const AcademyFee = () => {
             variant={active === "ECD" ? "contained" : "outlined"}
             color="primary"
             style={{ width: 100, borderRight: "1px solid blue" }}
-            onClick={() => setActive("ECD")}
+            onClick={() => handleToggle("ECD")}
           >
             ECD
           </Button>
           <Button
             variant={active === "PRIMARY" ? "contained" : "outlined"}
-            onClick={() => setActive("PRIMARY")}
+            onClick={() => handleToggle("PRIMARY")}
             color="primary"
           >
             PRIMARY
           </Button>
         </ButtonGroup>
         <Box className="p-3">
+
+          {spin ? <Box className="flex justify-center"><CircularProgress  color="blue" className="text-blue-700" /></Box>:null}
           {active === "ECD" && (
             <Typography variant="body2">
               {" "}
@@ -345,7 +356,7 @@ const AcademyFee = () => {
         </Box>
       </Box>
       <TableContainer>
-        <Table className="table-hover table-bordered ">
+      {!spin ?  <Table className="table-hover table-bordered ">
           <TableHead>
             <TableRow>
               <TableCell>Details</TableCell>
@@ -418,7 +429,7 @@ const AcademyFee = () => {
               </>
             )}
           </TableBody>
-        </Table>
+        </Table>:null}
       </TableContainer>
 
       <Typography

@@ -40,102 +40,7 @@ const Intro = ({ churcharea = [], fast = {}, getDate, selected }) => {
   )
   return (
     <Box>
-      <Grid
-        container
-        direction="row"
-        justify="space-evenly"
-        alignItems="flex-start"
-      >
-        {/* grid one*/}
-        <Grid item className="p-2 mb-1 mx-2 my-2" xs={12} md={4} lg={4}>
-          <Card
-            className="p-4"
-            style={{
-              minHeight: 160,
-
-              padding: "1rem",
-              textAlign: "center",
-            }}
-          >
-            {" "}
-            <Typography className="  " variant="body1">
-              {" "}
-              <strong>
-                Theme of the Year - {new Date().getFullYear()}
-              </strong>{" "}
-            </Typography>
-            <Typography variant="body2" className="!font-semibold !text-2xl  text-uppercase !py-3 mb-2">
-             Gather Grow Transform
-            </Typography>
-          </Card>
-        </Grid>
-
-        {/* grid 2*/}
-        <Grid
-          className=" mr-2    my-2  p-2 mt-2 "
-          // sx={{ border: "1px solid red" }}
-          xs={12}
-          md={4}
-          lg={4}
-          item
-        >
-          <Card
-            className="p-1 "
-            style={{
-              minHeight: 160,
-
-              padding: "1rem",
-              textAlign: "center",
-            }}
-          >
-            <Typography className=" r mb-2">
-              <strong>
-                Scripture of the Year - {new Date().getFullYear()}
-              </strong>
-            </Typography>
-            <Typography className="!text-3xl !font-medium">
-              Acts 2:42-47
-            </Typography>
-          </Card>
-        </Grid>
-        {/* grid 3*/}
-        <Grid xs={12} md={3} lg={3} item className="d p-2">
-          {/*<!-- Responsive section -->*/}
-          <Card
-            className=" p-2 m-2 "
-            style={{
-              minHeight: 150,
-
-              padding: "1rem",
-              textAlign: "center",
-            }}
-          >
-            {" "}
-            <Typography
-              variant="body1"
-              style={{ fontWeight: "bold" }}
-              className=" text-heading text-uppercase text-lg font-bold   mb-2 "
-            >
-              {" "}
-              Sunday Service
-            </Typography>
-            <Box className="my-3">
-              <Typography variant="body2" className="mb-2">
-                First service 8:30 - 9:45 AM{" "}
-              </Typography>
-              <Typography variant="body2" className="mb-2">
-                {" "}
-                Second Service 10:00 - 11:30 AM{" "}
-              </Typography>
-              <Typography variant="body2">
-                {" "}
-                Youth Service & Sunday School 9:30 - 11:30 AM{" "}
-              </Typography>
-            </Box>
-          </Card>
-          {/*<!--End Responsive -->*/}
-        </Grid>
-      </Grid>
+    
 
       {!!fast?.id &&
         new Date().getMonth() < 1 &&
@@ -144,11 +49,13 @@ const Intro = ({ churcharea = [], fast = {}, getDate, selected }) => {
             <Fasting {...fast} getDate={getDate} selected={selected} />
           </>
         )}
-
+<InfoSection />
       <Divider className="mt-4" />
-      <Celebrating churcharea={churcharea[0]} />
+    
+      <WelcomeSection churcharea={churcharea[0]} />
       <Divider className="mt-4" />
-      <Fellowship churcharea={churcharea[1]} />
+      <FellowshipSection churcharea={churcharea[1]} />
+     
       <Divider className="mt-4" />
       <Companionship churcharea={churcharea[2]} />
       <Divider className="mt-4" />
@@ -158,36 +65,84 @@ const Intro = ({ churcharea = [], fast = {}, getDate, selected }) => {
 }
 export default Intro
 
-const Celebrating = ({ churcharea }) => (
-  <Card>
-    <CardHeader
-      title=" Celebrating and sharing the love of God."
-      className="text-center my-1 p-0 purped"
-    />
-
-    <CardContent className=" my-1 p-3">
-      <Box className=" float-right">
-        {" "}
-        <CardMedia
+const InfoSection = () => (
+  <div className="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-3 gap-8">
+    <div className="bg-white p-8 rounded-lg shadow-sm">
+      <h3 className="text-xl font-semibold text-gray-900 mb-4">Theme of the Year - 2025</h3>
+      <p className="text-lg font-medium text-blue-700">GATHER GROW TRANSFORM</p>
+    </div>
+    
+    <div className="bg-white p-8 rounded-lg shadow-sm">
+      <h3 className="text-xl font-semibold text-gray-900 mb-4">Scripture of the Year - 2025</h3>
+      <p className="text-lg font-medium text-blue-700">Acts 2:42-47</p>
+    </div>
+    
+    <div className="bg-white p-8 rounded-lg shadow-sm">
+      <h3 className="text-xl font-semibold text-gray-900 mb-4">Sunday Service Times</h3>
+      <div className="space-y-2 text-gray-600">
+        <p>First Service: 8:30 - 9:45 AM</p>
+        <p>Second Service: 10:00 - 11:30 AM</p>
+        <p>Youth Service & Sunday School: 9:30 - 11:30 AM</p>
+      </div>
+    </div>
+  </div>
+);
+const WelcomeSection = ({ churcharea }) => (
+  <div className="max-w-7xl mx-auto px-4 py-16">
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="space-y-6">
+        <h2 className="text-3xl font-semibold text-gray-900">Welcome to Lakeview Africa Gospel Church</h2>
+        <p className="text-gray-600 leading-relaxed">
+          We are delighted to have you in our church; "a house of prayer for all people" - Isaiah 56:7. 
+          We are bound by our vision of sharing the light of the gospel of the Lord Jesus in Nakuru and beyond.
+        </p>
+        <div className="pt-4">
+          <h3 className="text-xl font-semibold text-gray-900 mb-3">Celebrating and sharing the love of God.</h3>
+        </div>
+      </div>
+      <div className="rounded-lg overflow-hidden shadow-lg -order-1 md:order-1">
+        <img 
           src={churcharea}
-          component="img"
-          className="thumbnail"
-          height={200}
-          width={100}
-        />{" "}
-      </Box>
+          alt="Church congregation" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+);
+const FellowshipSection = ({ churcharea }) => (
+  <div className="bg-gray-50 py-16">
+    <div className="max-w-7xl mx-auto px-4">
+      <h2 className="text-3xl font-semibold text-center text-gray-900 mb-12">Fellowship</h2>
+      <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="rounded-lg overflow-hidden shadow-lg order-2 md:order-1">
+          <img 
+             src={churcharea}
+            alt="Fellowship gathering" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="space-y-6 order-1 md:order-2">
+          <p className="text-gray-600 leading-relaxed">
+            At Lakeview AGC, we proclaim the Gospel of Jesus Christ to all people through 
+            preaching the word of God, Prayers, fellowship and communion.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h4 className="font-semibold text-gray-900 mb-2">Prayer Groups</h4>
+              <p className="text-gray-600">Join our weekly prayer meetings and spiritual growth sessions.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h4 className="font-semibold text-gray-900 mb-2">Community</h4>
+              <p className="text-gray-600">Connect with fellow believers in our vibrant church community.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
 
-      <Typography className=" my-1  ">
-        {" "}
-        Welcome to Lakeview Africa Gospel Church official website.
-        <br /> We are delighted to have you in our church;{" "}
-        <q> a house of prayer for all people </q>- Isaiah 56:7. We are bound by
-        our vision of sharing the light of the gospel of the Lord Jesus in
-        Nakuru and beyond.
-      </Typography>
-    </CardContent>
-  </Card>
-)
 
 const Fellowship = ({ churcharea }) => (
   <Card>
@@ -212,24 +167,14 @@ const Fellowship = ({ churcharea }) => (
 )
 
 const Companionship = ({ churcharea }) => (
-  <Card>
-    <CardHeader
-      title="Companionship"
-      className="text-center my-1 p-1 purped "
-    />
-
-    <CardContent className=" my-1 p-3">
-      <Box className=" float-right">
-        {" "}
-        <CardMedia
-          src={churcharea}
-          component="img"
-          className="thumbnail"
-          height={200}
-          width={100}
-        />{" "}
-      </Box>
-      <Typography className=" my-1 p-0">
+  <Box className="bg-gray-50 py-4 md:py-16">
+    <Box className="max-w-7xl mx-auto px-4">
+ 
+     
+      <Typography className="text-3xl font-semibold text-center text-gray-900 mb-12">Companionship</Typography>
+      <Box className="grid md:grid-cols-2 gap-4 md:gap-12 items-center">
+      <Box className="p-2 md:p-6 " >
+      <Typography className=" my-1p-2 md:p-4 text-gray-600 leading-loose">
         {" "}
         We believe in companionship as a family bound by the body of Jesus
         Christ. We endeavor , through word and deed, to witness and undertake
@@ -237,45 +182,58 @@ const Companionship = ({ churcharea }) => (
         sin, poverty and disease and lead a Christian life in a Christian
         environment that inculcate the fruits of holy spirit as envisaged in
         Galatians 5:6.{" "}
-      </Typography>
-    </CardContent>
-  </Card>
+      </Typography></Box>
+      <Box className="-order-1 md:order-1">
+        {" "}
+        <CardMedia
+          src={churcharea}
+          component="img"
+          className="thumbnail w-full h-full object-cover"
+          
+        />{" "}
+      </Box>
+      </Box>
+      </Box>
+   
+  </Box>
 )
 const Missions = ({ churcharea }) => (
-  <Card>
-    <CardHeader
-      title="  Missions and Partnerships"
-      className="text-center my-1 p-0 purped"
-    />
-    <CardContent className=" my-1 p-3">
-      <Box className=" float-right">
+  <Box className="bg-gray-50 py-16">
+  <Box  className="max-w-7xl mx-auto px-4 ">
+   
+    <Typography className="text-3xl font-semibold text-center text-gray-900 mb-12">Missions and Partnerships</Typography>
+    <Box className="grid md:grid-cols-2 gap-12 items-center">
+    <Box className="flex flex-col items-center">
+      <Typography className="pb-2 leading-loose">
+        We were honoured to have <b>Rev Isaac Saoshiro</b>, the founder of
+        Lakeview AGC.{" "}
+      </Typography>
+      <Typography className="pb-2 leading-loose">
+        {" "}
+        We thank God for His blessings and for allowing us to reach the people
+        of Turkana and Kakuma refugee camps.
+      </Typography>
+      <Typography>We are currently partnering with AGC
+        mission station- Turkana/Kakuma.the missionaries on ground are{" "}
+        <b>Zacceus</b> and <b>Faith Siele</b>.</Typography>
+      <Typography className="pb-2 leading-loose">
+        {" "}
+        We thank God for our church plant Olive Fellowship AGC.Let's continue to
+        pray for them.
+      </Typography>
+      </Box> <Box className="-order-1 md:order-1" >
         {" "}
         <CardMedia
           src={churcharea}
           component="img"
           className="thumbnail"
-          height={200}
-          width={100}
+         
         />{" "}
       </Box>
-      <Typography>
-        We were honoured to have <b>Rev Isaac Saoshiro</b>, the founder of
-        Lakeview AGC.{" "}
-      </Typography>
-      <Typography>
-        {" "}
-        We thank God for His blessings and for allowing us to reach the people
-        of Turkana and Kakuma refugee camps.We are currently partnering with AGC
-        mission station- Turkana/Kakuma.the missionaries on ground are{" "}
-        <b>Zacceus</b> and <b>Faith Siele</b>.
-      </Typography>
-      <Typography>
-        {" "}
-        We thank God for our church plant Olive Fellowship AGC.Let's continue to
-        pray for them.
-      </Typography>
-    </CardContent>
-  </Card>
+    </Box>
+   
+  </Box>
+  </Box>
 )
 
 export const Fasting = ({

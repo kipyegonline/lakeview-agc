@@ -55,3 +55,4 @@ const footer = {
   borderTop: "1px solid rebeccapurple",
   boxShadow: "-2px -2px 5px purple,2px 2px 5px purple",
 }
+

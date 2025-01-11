@@ -13,6 +13,7 @@ import Twitter from "@mui/icons-material/Twitter"
 
 import Header from "./header"
 import Footer from "./ui/footer/Footer"
+import NewFooter from "./ui/footer/index"
 import Nav from "./ui/Nav/Nav"
 
 import Give from "./give/Give"
@@ -62,8 +63,10 @@ const Layout = ({ children }) => {
       <Nav />
       <Give />
       {children}
+      {/*<Footer />*/}
     
-      <Footer />
+    
+      <NewFooter />
       <CircleArrowUpIcon   className="navigation-arrow"
         icon="arrow-alt-circle-up"
         size={arrowSize}
@@ -105,6 +108,8 @@ const useStyles = makeStyles({
   },
 })
 let url = "https://www.youtube.com/channel/UCVzXXOTTs7PLfh5wjB3KB9g"
+let facebook="https://www.facebook.com/Lakeview-AGC-Nakuru-355976284540480"
+let instagram="https://www.instagram.com/lakeviewagcnakuru/"
 
 const Socials = ({ useStyles }) => {
   const classes = useStyles()
@@ -116,7 +121,7 @@ const Socials = ({ useStyles }) => {
           dense
           onClick={() =>
             window.open(
-              "https://www.facebook.com/Lakeview-AGC-Nakuru-355976284540480"
+              facebook
             )
           }
         >
@@ -143,7 +148,7 @@ const Socials = ({ useStyles }) => {
         <ListItem
           dense
           onClick={() =>
-            window.open("https://www.instagram.com/lakeviewagcnakuru/")
+            window.open(instagram)
           }
         >
           <ListItemIcon>

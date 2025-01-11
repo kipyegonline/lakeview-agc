@@ -17,9 +17,11 @@ export const ReactSlider = ({ carousels = [] }) => {
     pauseOnHover: true,
     easing: "linear",
     swipe: true,
+    maxHeight: 403,
+    
   }
   return (
-    <Slider {...settings}>
+    <Slider {...settings} style={{ maxHeight: 500, overflow: "hidden" }} className="">
       {carousels.map((caro, index) => (
         <Box key={index} className="relative">
           <img
@@ -29,6 +31,7 @@ export const ReactSlider = ({ carousels = [] }) => {
               height: "auto",
               maxHeight: 403,
               width: "100%",
+             // overflow: "hidden",
 
               objectFit: "cover",
             }}
