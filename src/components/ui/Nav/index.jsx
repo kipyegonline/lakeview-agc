@@ -60,7 +60,7 @@ const Navigation = ({ setToggle=()=>{}}) => {
               navlink text-capitalize text-expanded text-decoration-none !text-gray-800 p-2
              border-2 border-transparent hover:border-purple-500 hover:border-2 hover:rounded-md hover:p-2 hover:shadow-md
               ${isActive ? 'text-purple-500 font-semibold' : ''}
-            `)(item.path===window.location.pathname)}
+            `)(item.path===globalThis?.window?.location?.pathname)}
           >
             {item.icon}
             {item.text}
