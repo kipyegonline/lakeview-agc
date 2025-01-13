@@ -60,7 +60,7 @@ const Footer = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Department Prayer Days</h3>
               <div className="space-y-2">
                 {departments.map((item) => (
-                  <div key={item.day} className="flex justify-evenlyn  pb-2 md:pb-6">
+                  <div key={item.day} className="flex justify-evenly n  pb-2 md:pb-6">
                     <span className="text-gray-600 font-medium">{item.day}</span>
                     <span className="text-gray-500">{item.department}</span>
                   </div>

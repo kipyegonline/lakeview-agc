@@ -7,8 +7,8 @@ import SchoolIcon from "@mui/icons-material/School"
 import Close from "@mui/icons-material/Close"
 
 import { SpeakerNotes } from "@mui/icons-material"
-import { BookOpenText, GraduationCap, Handshake, MailCheck, MessageSquareMore, Users } from "lucide-react"
-
+import { BookOpenText, GraduationCap, Handshake, MailCheck, MessageSquareMore, Navigation, Users } from "lucide-react"
+import Lakeviewnavigation from "./index"
 const style = {
   color: "purple",
   borderBottom: "1px solid purple",
@@ -17,13 +17,7 @@ const style = {
 }
 
 const Nav = ({ match }) => {
-  function handleModal() {
-    $("#giveModal").modal({
-      show: true,
-      keyboard: true,
-    })
-  }
-  const selectedStylez = { color: "black" }
+  
   const [toggle, setToggler] = useState(false)
 //navbar navbar-expand-lg navbar-lights text-black  py-lg-2 mt-2 border-red-400 border-solid border-1
 const size=32
@@ -42,7 +36,7 @@ const size=32
         >
           <Typography variant="h6" className="text-center">
             {" "}
-            Lakeview AGC
+            Lakeview AGC.
           </Typography>
          
         </NavLink>
@@ -66,8 +60,9 @@ const size=32
         </button>
         {/**collapse navbar-collaps */}
         <div className="w-full   " id="navbarResponsive">
-          <div className="hidden md:block py=2">   <AppNav setToggle={()=>null}/></div>
-          <div className="block md:hidden py-2">  {toggle ? <AppNav setToggle={setToggler}/>:null}</div>
+          
+          <div className="hidden md:block py=2">   <Lakeviewnavigation setToggle={()=>null}/></div>
+          <div className="block md:hidden py-2">  {toggle ? <Lakeviewnavigation setToggle={setToggler} />:null}</div>
        
         
         </div>
@@ -99,7 +94,7 @@ const AppNav=({setToggle=()=>{}})=>{
     <li className="nav-item px-lg-2 ">
       <NavLink
         activeStyle={style}
-        className="nav-link text-capitalize text-expanded "
+        className=" text-capitalize text-expanded "
         to={"/about-lakeview-agc"}
       >
        

@@ -107,6 +107,8 @@ hr.divider {
 }
 /*Nav */
 .nav-link {
+  border: 1px solid transparent;
+
   font-size: 0.8rem;
   font-weight: normal;
   font-family: "roboto";
@@ -160,6 +162,8 @@ hr.divider {
   /*color: #fff;*/
 }
 .nav-link {
+  border: 1px solid transparent;
+
   padding: 0.5rem 0;
   font-family: roboto;
 }

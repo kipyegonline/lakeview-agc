@@ -31,7 +31,7 @@ const classes = createStyles()
 const PStaff = () => {
   return (
     <Container
-      className="p-2 my-2"
+      className="p-2 my-2 animate-fade-in"
       id="pastoralcenter"
       style={{ minHeight: "100vh" }}
     >
